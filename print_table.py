@@ -32,9 +32,9 @@ def main():
 
 def print_table(data: list[str]) -> None:
     col_widths = [0] * len(data)
-    for row in range(len(data)):
+    for row, _ in enumerate(data):
         lengths = []
-        for column in range(len(data[row])):
+        for column, _ in enumerate(data[row]):
             lengths.append(len(data[row][column]))
             col_widths[row] = sorted(lengths)[-1]
     for i, _ in enumerate(data[row]):
