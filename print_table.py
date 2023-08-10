@@ -37,7 +37,7 @@ def print_table(data: list[str]) -> None:
         for column in range(len(data[row])):
             lengths.append(len(data[row][column]))
             col_widths[row] = sorted(lengths)[-1]
-    for i in range(len(data[row])):
+    for i, _ in enumerate(data[row]):
         print(
             f"{data[0][i].rjust(col_widths[0])} | {data[1][i].rjust(col_widths[1])} | {data[2][i].rjust(col_widths[2])}"
         )
